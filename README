@@ -1,0 +1,5 @@
+This tree contains device tree definitions extracted from the Linux
+kernel source tree, and tweaked for Xenbedded. It is meant to provide
+example device trees while upstream device trees stabalize.
+
+Type "make help" for a list of build targets.
