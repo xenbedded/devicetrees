@@ -7,7 +7,6 @@
 #include <dt-bindings/soc/tegra-pmc.h>
 
 #include "tegra210.dtsi"
-#include "xen-chosen.dtsi"
 
 / {
 	model = "Google Pixel C";
@@ -26,6 +25,11 @@
 
 		xen,dom0-bootargs = "console=ttyS0,115200n1 earlycon=xenboot psci=enable rw ignore_loglevel clk_ignore_unused drm.atomic=1 firmware_class.path=/vendor/firmware kern_guid=%U no_console_suspend root=/dev/mmcblk0p4 rootwait swiotlb=8192";
     xen,xen-bootargs = "dom0_mem=512M loglvl=all";
+	};
+
+	module@0 {
+		compatible = "multiboot,kernel", "multiboot,module";
+		reg = <0 0 0 0>;
 	};
 
 	memory {
